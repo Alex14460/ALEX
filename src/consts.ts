@@ -60,12 +60,6 @@ export const SOCIALS: Socials = [
     HREF: "mailto:alexandrer365@gmail.com",
   },
   { 
-    NAME: "Github",
-    ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
-  },
-  { 
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "Alexandre Roussel",
