@@ -11,6 +11,7 @@ tags:
 - VPS / Node Infrastructure
 - On-chain Strategy
 ---
+![Farming dashboard](/projects/farming/farming1.jpeg)
 
 In June 2023 I founded and led a small crypto airdrop farming operation, coordinating a team of friends to systematically identify, farm, and claim token airdrops across the Ethereum L2, restaking, and DeFi ecosystems. What started as a side activity between three people grew into a structured, long-running operation: over two and a half years and 26,000+ messages of internal coordination, spanning dozens of protocols and two dedicated sub-teams.
 
@@ -21,6 +22,12 @@ The core activity was multi-chain "airdrop farming": using on-chain interactions
 **Tools and techniques**
 
 A key part of the project was managing farming activity across many wallets while staying within the bounds of each protocol's anti-sybil detection — meaning wallets needed to look organic (varied timing, transaction patterns, and volumes) rather than mechanically identical. This meant paying close attention to IP/fingerprint hygiene (one VPS per identity), transaction diversity, and realistic capital allocation per account, and regularly discussing detection risks and best practices as protocols tightened their criteria. I also spun up and managed cloud VPS infrastructure (Contabo and others) to run isolated environments per wallet cluster and, later, to operate actual blockchain validator/testnet nodes for data-availability and restaking projects.
+
+|                                                                                         |
+| --------------------------------------------------------------------------------------- |
+| ![](/projects/farming/farming2.jpeg)                                                    |
+| *Dashboard to monitor actions performed, here for a potential Base blockchain airdrop.* |
+
 
 **Node infrastructure sub-project**
 
