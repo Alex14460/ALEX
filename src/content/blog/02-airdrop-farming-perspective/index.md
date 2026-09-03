@@ -10,6 +10,8 @@ tags:
 - Strategy
 ---
 
+**Quick primer, if you're new to this:** an "airdrop" is when a crypto project gives away free tokens to people who used it early, as a thank-you and a way to decentralize ownership. "Farming" an airdrop just means deliberately using a protocol — swapping tokens, providing liquidity, bridging funds, whatever counts — specifically to qualify for that future giveaway, often before the project even confirms one is coming. Think of it like showing up to every open house in a neighborhood on the rumor that early visitors might get a free house someday. Sometimes you get the house. Often you get nothing. The rest of this post is about what two and a half years of doing that, semi-professionally, actually taught me.
+
 I started farming airdrops in June 2023 with a simple, almost naive thesis: if you're early to enough protocols, and you interact with them the way a genuine user would, you get paid later when they launch a token. Looking back at over two and a half years of near-daily conversation with the small team I coordinated on this, my thinking about that opportunity changed more than I expected — and the way it changed is, I think, more interesting than any single airdrop we caught.
 
 **Phase one: everything looks like free money**
