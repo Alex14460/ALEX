@@ -7,11 +7,11 @@ import SearchCollection from "@components/SearchCollection";
 import { BLOG } from "@consts";
 
 const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  .filter((post :any) => !post.data.draft)
+  .sort((a :any, b :any) => b.data.date.getTime() - a.data.date.getTime());
 
-const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort(
-  (a, b) => a.localeCompare(b),
+const tags = [...new Set(posts.flatMap((post :any) => post.data.tags))].sort(
+  (a :any, b :any) => a.localeCompare(b),
 );
 
 const estimated_initial_size =
@@ -38,7 +38,7 @@ const estimated_initial_size =
       <SearchCollection
         client:load
         entry_name={"posts"}
-        tags={tags}
+        tags={tags as string[]}
         data={posts}
       />
     </div>
