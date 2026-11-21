@@ -5,6 +5,8 @@ export type Page = {
 
 export interface Site extends Page {
   AUTHOR: string
+  LOCATION: string
+  LANGUAGES: string[]
 }
 
 export type Links = {
