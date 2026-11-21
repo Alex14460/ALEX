@@ -3,8 +3,10 @@ import type { Site, Page, Links, Socials } from "@types"
 // Global
 export const SITE: Site = {
   TITLE: "Alexandre Roussel",
-  DESCRIPTION: "Welcome to my page.",
+  DESCRIPTION: "Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingue FR/EN.",
   AUTHOR: "Alexandre Roussel",
+  LOCATION: "Las Palmas, Gran Canaria",
+  LANGUAGES: ["fr", "en"],
 }
 
 // Work Page
@@ -33,37 +35,47 @@ export const SEARCH: Page = {
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Home",
+    HREF: "/",
   },
-  { 
-    TEXT: "Work", 
-    HREF: "/work", 
+  {
+    TEXT: "Work",
+    HREF: "/work",
   },
-  { 
-    TEXT: "Blog", 
-    HREF: "/blog", 
+  {
+    TEXT: "Blog",
+    HREF: "/blog",
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Projects",
+    HREF: "/projects",
+  },
+  {
+    TEXT: "About",
+    HREF: "/about",
   },
 ]
 
 // Socials
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "Email",
-    ICON: "email", 
-    TEXT: "alexandrer365@gmail.com",
-    HREF: "mailto:alexandrer365@gmail.com",
+    ICON: "email",
+    TEXT: "contact@alexandreroussel.com",
+    HREF: "mailto:contact@alexandreroussel.com",
   },
-  { 
+  {
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "Alexandre Roussel",
     HREF: "https://www.linkedin.com/in/roussel-alexandre/",
+  },
+  {
+    NAME: "GitHub",
+    ICON: "github",
+    TEXT: "@Alex14460",
+    HREF: "https://github.com/Alex14460",
   },
 ]
 

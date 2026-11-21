@@ -1,0 +1,121 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
+import { SITE } from '@consts'
+---
+
+<PageLayout title="À propos" description="Profil détaillé d'Alexandre Roussel — Customer Support & Account Management, SaaS, Fintech, Crypto.">
+  <TopLayout>
+    <div class="animate page-heading text-4xl md:text-6xl font-bold tracking-tight">
+      À propos
+    </div>
+    <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+      Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingue FR/EN.
+    </div>
+    <div class="animate mt-6 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400 font-mono">
+      <span>📍 {SITE.LOCATION}</span>
+      <span>·</span>
+      <span>🌐 {SITE.LANGUAGES.join(' / ')}</span>
+      <span>·</span>
+      <span>🎓 Master 2, Management France-Amérique (IAE Caen, 2014–2016)</span>
+    </div>
+  </TopLayout>
+
+  <BottomLayout>
+    <section class="py-12 border-b border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Profil</h2>
+      <div class="prose dark:prose-invert max-w-3xl text-lg">
+        <p>
+          J'accompagne les utilisateurs et les clients grands comptes sur des produits techniques — crypto, fiscalité, outils financiers — où la précision de la réponse compte autant que le ton.
+        </p>
+        <p>
+          Mon expérience ne s'arrête pas au support : je gère aussi mes propres infrastructures crypto (mining, automatisation, VPS, déploiement de nodes), ce qui me donne une compréhension pratique des produits plutôt que théorique.
+        </p>
+        <p>
+          Je privilégie l'exactitude à l'enrobage — dans une réponse client comme dans un CV.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 border-b border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Compétences clés</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Support & Account Mgmt</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Support VIP / KOL</li>
+            <li>Gestion de comptes</li>
+            <li>Résolution d'incidents</li>
+            <li>Documentation client</li>
+            <li>SLA / KPI / CSAT</li>
+            <li>CRM / Ticketing (Zendesk, JIRA, Linear, Salesforce)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Fintech & Crypto</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Fiscalité crypto (Waltio)</li>
+            <li>Trading / Exchanges (Bitget)</li>
+            <li>Mining (GPU/ASIC, 36 GPUs)</li>
+            <li>Nodes / VPS (EigenLayer, Dusk, Avail, Babylon...)</li>
+            <li>Airdrop farming (2.5 ans, équipe 4 pers.)</li>
+            <li>DeFi / Restaking / L2s</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Langues</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Français — natif</li>
+            <li>Anglais — courant (TOEFL 105 / TOEIC 990)</li>
+            <li>Espagnol — conversationnel</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Technique & Outils</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Scripts d'automatisation (Python, Bash, JS/TS)</li>
+            <li>Déploiement VPS / Infrastructure cloud</li>
+            <li>Git / GitHub / CI-CD</li>
+            <li>Astro / SolidJS / Tailwind (ce site)</li>
+            <li>Whisper.cpp / FFmpeg (transcription locale)</li>
+            <li>BigQuery / SQL (analyse on-chain)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 border-b border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Formation</h2>
+      <div class="prose dark:prose-invert max-w-2xl">
+        <p><strong>Master 2 — Management France-Amérique</strong> (IAE Caen, 2014–2016)</p>
+        <p>Double compétence gestion / relation client, orientée internationale. Mémoire sur la stratégie de développement commercial transatlantique.</p>
+        <p><strong>Certifications :</strong> TOEFL 105/120 · TOEIC 990/990</p>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-6">Projets personnels notables</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="p-6 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50">
+          <h3 class="font-semibold mb-2">Infrastructure Crypto — Mining & Airdrop Farming</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2017–présent · Projet indépendant</p>
+          <ul class="space-y-1 text-sm">
+            <li>Ferme de minage : 36 GPUs + 1 ASIC (2017–2018), ~17k€ investis, break-even</li>
+            <li>Airdrop farming : équipe 4 pers., 2.5 ans, 26k+ messages coordination, VPS multi-cloud</li>
+            <li>Node infrastructure : validators/testnet pour Dusk, EigenLayer, Avail, Babylon...</li>
+          </ul>
+        </article>
+        <article class="p-6 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50">
+          <h3 class="font-semibold mb-2">Pipeline IA local — Transcription & Analyse</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2024–présent · Projet personnel</p>
+          <ul class="space-y-1 text-sm">
+            <li>Transcription locale Whisper.cpp + FFmpeg sur MacBook Pro (pas de cloud)</li>
+            <li>Extraction idées principales → analyse cohérence sujets/valeurs sur plusieurs années</li>
+            <li>Optimisation CPU-only (i7-4790) : 1 min audio en ~3.6s (model=tiny, threads=4)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </BottomLayout>
+</PageLayout>
