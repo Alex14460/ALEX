@@ -7,7 +7,7 @@ type Context = {
 }
 
 export async function GET(context: Context) {
-	const posts = await getCollection("blog")
+  const posts = await getCollection("blog")
   const projects = await getCollection("projects")
 
   const items = [...posts, ...projects]
@@ -18,13 +18,20 @@ export async function GET(context: Context) {
     title: SITE.TITLE,
     description: SITE.DESCRIPTION,
     site: context.site,
-    items: items.map((item) => ({
-      title: item.data.title,
-      description: item.data.summary,
-      pubDate: item.data.date,
-      link: item.slug.startsWith("blog")
+    items: items.map((item) => {
+      const link = item.slug.startsWith("blog")
         ? `/blog/${item.slug}/`
-        : `/projects/${item.slug}/`,
-    })),
+        : `/projects/${item.slug}/`
+
+      return {
+        title: item.data.title,
+        description: item.data.summary,
+        pubDate: item.data.date,
+        link,
+        content: item.data.summary,
+      }
+    }),
+    customData: `<language>en-us</language>
+<atom:link href="${context.site}rss.xml" rel="self" type="application/rss+xml" />`,
   })
 }
