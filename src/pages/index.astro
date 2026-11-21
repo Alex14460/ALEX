@@ -44,20 +44,20 @@ function formatWorkDate(input: Date | string) {
       Alexandre Roussel
     </div>
     <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-      Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingue FR/EN.
+      Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.
     </div>
     <div class="animate mt-6 flex flex-wrap gap-4">
       <a href="/work" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
-        Expériences
+        Work
       </a>
       <a href="/projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
-        Projets
+        Projects
       </a>
       <a href="/blog" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
         Blog
       </a>
       <a href="/CV_Roussel_Alexandre_v2-2.pdf" download class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
-        Télécharger CV
+        Download CV
       </a>
     </div>
     <div class="animate mt-8 flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 font-mono">
@@ -70,7 +70,7 @@ function formatWorkDate(input: Date | string) {
   <BottomLayout>
     {workEntries.length > 0 && (
       <section class="py-12 border-t border-black/10 dark:border-white/25">
-        <h2 class="text-2xl font-bold mb-8">Expériences récentes</h2>
+        <h2 class="text-2xl font-bold mb-8">Recent Experience</h2>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {workEntries.map((entry) => (
             <article class="p-6 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50 hover:border-black/20 dark:hover:border-white/30 transition-colors duration-300 h-full">
@@ -83,14 +83,14 @@ function formatWorkDate(input: Date | string) {
                 <entry.Content />
               </div>
               <a href={`/work#${entry.slug}`} class="inline-flex items-center gap-1 mt-4 text-sm font-medium text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                Voir détails →
+                View details →
               </a>
             </article>
           ))}
         </div>
         <div class="mt-8 text-center">
           <a href="/work" class="inline-flex items-center gap-2 text-sm font-medium text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-            Voir toutes les expériences →
+            View all experience →
           </a>
         </div>
       </section>
@@ -98,7 +98,7 @@ function formatWorkDate(input: Date | string) {
 
     {recentBlog.length > 0 && (
       <section class="py-12 border-t border-black/10 dark:border-white/25">
-        <h2 class="text-2xl font-bold mb-8">Derniers articles</h2>
+        <h2 class="text-2xl font-bold mb-8">Latest Posts</h2>
         <div class="grid gap-6 md:grid-cols-2">
           {recentBlog.map((entry) => (
             <ArrowCard entry={entry} pill={true} />
@@ -106,7 +106,7 @@ function formatWorkDate(input: Date | string) {
         </div>
         <div class="mt-8 text-center">
           <a href="/blog" class="inline-flex items-center gap-2 text-sm font-medium text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-            Voir tous les articles →
+            View all posts →
           </a>
         </div>
       </section>
@@ -114,7 +114,7 @@ function formatWorkDate(input: Date | string) {
 
     {recentProjects.length > 0 && (
       <section class="py-12 border-t border-black/10 dark:border-white/25">
-        <h2 class="text-2xl font-bold mb-8">Projets en vedette</h2>
+        <h2 class="text-2xl font-bold mb-8">Featured Projects</h2>
         <div class="grid gap-6 md:grid-cols-2">
           {recentProjects.map((entry) => (
             <ArrowCard entry={entry} pill={true} />
@@ -122,7 +122,7 @@ function formatWorkDate(input: Date | string) {
         </div>
         <div class="mt-8 text-center">
           <a href="/projects" class="inline-flex items-center gap-2 text-sm font-medium text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-            Voir tous les projets →
+            View all projects →
           </a>
         </div>
       </section>

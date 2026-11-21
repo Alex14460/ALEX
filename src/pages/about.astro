@@ -5,49 +5,49 @@ import BottomLayout from '@layouts/BottomLayout.astro'
 import { SITE } from '@consts'
 ---
 
-<PageLayout title="À propos" description="Profil détaillé d'Alexandre Roussel — Customer Support & Account Management, SaaS, Fintech, Crypto.">
+<PageLayout title="About" description="Alexandre Roussel — Customer Support & Account Management, SaaS, Fintech, Crypto.">
   <TopLayout>
     <div class="animate page-heading text-4xl md:text-6xl font-bold tracking-tight">
-      À propos
+      About
     </div>
     <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-      Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingue FR/EN.
+      Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.
     </div>
     <div class="animate mt-6 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400 font-mono">
       <span>📍 {SITE.LOCATION}</span>
       <span>·</span>
       <span>🌐 {SITE.LANGUAGES.join(' / ')}</span>
       <span>·</span>
-      <span>🎓 Master 2, Management France-Amérique (IAE Caen, 2014–2016)</span>
+      <span>🎓 Master 2, Management France-America (IAE Caen, 2014–2016)</span>
     </div>
   </TopLayout>
 
   <BottomLayout>
     <section class="py-12 border-b border-black/10 dark:border-white/25">
-      <h2 class="text-2xl font-bold mb-6">Profil</h2>
+      <h2 class="text-2xl font-bold mb-6">Profile</h2>
       <div class="prose dark:prose-invert max-w-3xl text-lg">
         <p>
-          J'accompagne les utilisateurs et les clients grands comptes sur des produits techniques — crypto, fiscalité, outils financiers — où la précision de la réponse compte autant que le ton.
+          I support users and enterprise clients on technical products — crypto, tax, financial tools — where precision matters as much as tone.
         </p>
         <p>
-          Mon expérience ne s'arrête pas au support : je gère aussi mes propres infrastructures crypto (mining, automatisation, VPS, déploiement de nodes), ce qui me donne une compréhension pratique des produits plutôt que théorique.
+          My experience goes beyond support: I also run my own crypto infrastructure (mining, automation, VPS, node deployment), giving me practical product understanding rather than just theoretical.
         </p>
         <p>
-          Je privilégie l'exactitude à l'enrobage — dans une réponse client comme dans un CV.
+          I prioritize accuracy over fluff — in a client response as much as in a CV.
         </p>
       </div>
     </section>
 
     <section class="py-12 border-b border-black/10 dark:border-white/25">
-      <h2 class="text-2xl font-bold mb-6">Compétences clés</h2>
+      <h2 class="text-2xl font-bold mb-6">Key Skills</h2>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Support & Account Mgmt</h3>
           <ul class="space-y-2 text-sm">
-            <li>Support VIP / KOL</li>
-            <li>Gestion de comptes</li>
-            <li>Résolution d'incidents</li>
-            <li>Documentation client</li>
+            <li>VIP / KOL Support</li>
+            <li>Account Management</li>
+            <li>Incident Resolution</li>
+            <li>Customer Documentation</li>
             <li>SLA / KPI / CSAT</li>
             <li>CRM / Ticketing (Zendesk, JIRA, Linear, Salesforce)</li>
           </ul>
@@ -55,64 +55,64 @@ import { SITE } from '@consts'
         <div>
           <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Fintech & Crypto</h3>
           <ul class="space-y-2 text-sm">
-            <li>Fiscalité crypto (Waltio)</li>
+            <li>Crypto Tax (Waltio)</li>
             <li>Trading / Exchanges (Bitget)</li>
             <li>Mining (GPU/ASIC, 36 GPUs)</li>
             <li>Nodes / VPS (EigenLayer, Dusk, Avail, Babylon...)</li>
-            <li>Airdrop farming (2.5 ans, équipe 4 pers.)</li>
+            <li>Airdrop Farming (2.5 yrs, 4-person team)</li>
             <li>DeFi / Restaking / L2s</li>
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Langues</h3>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Languages</h3>
           <ul class="space-y-2 text-sm">
-            <li>Français — natif</li>
-            <li>Anglais — courant (TOEFL 105 / TOEIC 990)</li>
-            <li>Espagnol — conversationnel</li>
+            <li>French — native</li>
+            <li>English — fluent (TOEFL 105 / TOEIC 990)</li>
+            <li>Spanish — conversational</li>
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Technique & Outils</h3>
+          <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Technical & Tools</h3>
           <ul class="space-y-2 text-sm">
-            <li>Scripts d'automatisation (Python, Bash, JS/TS)</li>
-            <li>Déploiement VPS / Infrastructure cloud</li>
+            <li>Automation scripts (Python, Bash, JS/TS)</li>
+            <li>VPS deployment / Cloud infrastructure</li>
             <li>Git / GitHub / CI-CD</li>
-            <li>Astro / SolidJS / Tailwind (ce site)</li>
-            <li>Whisper.cpp / FFmpeg (transcription locale)</li>
-            <li>BigQuery / SQL (analyse on-chain)</li>
+            <li>Astro / SolidJS / Tailwind (this site)</li>
+            <li>Whisper.cpp / FFmpeg (local transcription)</li>
+            <li>BigQuery / SQL (on-chain analysis)</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="py-12 border-b border-black/10 dark:border-white/25">
-      <h2 class="text-2xl font-bold mb-6">Formation</h2>
+      <h2 class="text-2xl font-bold mb-6">Education</h2>
       <div class="prose dark:prose-invert max-w-2xl">
-        <p><strong>Master 2 — Management France-Amérique</strong> (IAE Caen, 2014–2016)</p>
-        <p>Double compétence gestion / relation client, orientée internationale. Mémoire sur la stratégie de développement commercial transatlantique.</p>
-        <p><strong>Certifications :</strong> TOEFL 105/120 · TOEIC 990/990</p>
+        <p><strong>Master 2 — Management France-America</strong> (IAE Caen, 2014–2016)</p>
+        <p>Dual competence in management / client relations, internationally oriented. Thesis on transatlantic business development strategy.</p>
+        <p><strong>Certifications:</strong> TOEFL 105/120 · TOEIC 990/990</p>
       </div>
     </section>
 
     <section class="py-12">
-      <h2 class="text-2xl font-bold mb-6">Projets personnels notables</h2>
+      <h2 class="text-2xl font-bold mb-6">Notable Personal Projects</h2>
       <div class="grid gap-6 md:grid-cols-2">
         <article class="p-6 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50">
-          <h3 class="font-semibold mb-2">Infrastructure Crypto — Mining & Airdrop Farming</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2017–présent · Projet indépendant</p>
+          <h3 class="font-semibold mb-2">Crypto Infrastructure — Mining & Airdrop Farming</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2017–present · Independent project</p>
           <ul class="space-y-1 text-sm">
-            <li>Ferme de minage : 36 GPUs + 1 ASIC (2017–2018), ~17k€ investis, break-even</li>
-            <li>Airdrop farming : équipe 4 pers., 2.5 ans, 26k+ messages coordination, VPS multi-cloud</li>
-            <li>Node infrastructure : validators/testnet pour Dusk, EigenLayer, Avail, Babylon...</li>
+            <li>Mining farm: 36 GPUs + 1 ASIC (2017–2018), ~€17k invested, break-even</li>
+            <li>Airdrop farming: 4-person team, 2.5 yrs, 26k+ coordination messages, multi-cloud VPS</li>
+            <li>Node infrastructure: validators/testnet for Dusk, EigenLayer, Avail, Babylon...</li>
           </ul>
         </article>
         <article class="p-6 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50">
-          <h3 class="font-semibold mb-2">Pipeline IA local — Transcription & Analyse</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2024–présent · Projet personnel</p>
+          <h3 class="font-semibold mb-2">Local AI Pipeline — Transcription & Analysis</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2024–present · Personal project</p>
           <ul class="space-y-1 text-sm">
-            <li>Transcription locale Whisper.cpp + FFmpeg sur MacBook Pro (pas de cloud)</li>
-            <li>Extraction idées principales → analyse cohérence sujets/valeurs sur plusieurs années</li>
-            <li>Optimisation CPU-only (i7-4790) : 1 min audio en ~3.6s (model=tiny, threads=4)</li>
+            <li>Local Whisper.cpp + FFmpeg transcription on MacBook Pro (no cloud)</li>
+            <li>Main idea extraction → topic/values consistency analysis over years</li>
+            <li>CPU-only optimization (i7-4790): 1 min audio in ~3.6s (model=tiny, threads=4)</li>
           </ul>
         </article>
       </div>

@@ -3,7 +3,7 @@ import type { Site, Page, Links, Socials } from "@types"
 // Global
 export const SITE: Site = {
   TITLE: "Alexandre Roussel",
-  DESCRIPTION: "Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingue FR/EN.",
+  DESCRIPTION: "Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.",
   AUTHOR: "Alexandre Roussel",
   LOCATION: "Las Palmas, Gran Canaria",
   LANGUAGES: ["fr", "en"],
