@@ -68,7 +68,7 @@ export const FR_LINKS: Links = [
   },
   {
     TEXT: "Blog",
-    HREF: "/blog",
+    HREF: "/fr/blog",
   },
   {
     TEXT: "À propos",

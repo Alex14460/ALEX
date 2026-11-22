@@ -1,8 +1,11 @@
 ---
 import Container from "@components/Container.astro"
+
+type Props = { pad?: "lg" | "sm" }
+const { pad = "lg" } = Astro.props
 ---
 
-<div class="pt-36 pb-5">
+<div class={pad === "lg" ? "pt-36 pb-5" : "pt-16 pb-5"}>
   <Container size="md">
     <slot/>
   </Container>

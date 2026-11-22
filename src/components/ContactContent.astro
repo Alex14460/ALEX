@@ -34,10 +34,22 @@ const pill = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border bor
   </div>
 
   <div>
-    <h3 class="font-semibold mb-2">{fr ? "Réseaux" : "Networks"}</h3>
-    <div class="flex flex-wrap gap-4">
-      <a href="https://www.linkedin.com/in/roussel-alexandre/" target="_blank" class="text-sm font-medium underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">LinkedIn →</a>
-      <a href="https://github.com/Alex14460" target="_blank" class="text-sm font-medium underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">GitHub →</a>
+    <h3 class="font-semibold mb-3">{fr ? "Profils en ligne" : "Online profiles"}</h3>
+    <div class="flex flex-col gap-3">
+      <a href="https://www.linkedin.com/in/roussel-alexandre/" target="_blank" class="group flex items-center justify-between gap-4 px-4 py-3 rounded-lg border border-black/15 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+        <span>
+          <span class="block font-semibold text-sm">{fr ? "LinkedIn — mon profil complet" : "LinkedIn — full experience & recommendations"}</span>
+          <span class="block text-xs text-gray-600 dark:text-gray-400 mt-0.5 font-mono">linkedin.com/in/roussel-alexandre</span>
+        </span>
+        <span class="text-sm font-medium group-hover:translate-x-0.5 transition-transform">→</span>
+      </a>
+      <a href="https://github.com/Alex14460" target="_blank" class="group flex items-center justify-between gap-4 px-4 py-3 rounded-lg border border-black/15 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+        <span>
+          <span class="block font-semibold text-sm">{fr ? "GitHub — code & scripts" : "GitHub — code & scripts"}</span>
+          <span class="block text-xs text-gray-600 dark:text-gray-400 mt-0.5 font-mono">github.com/Alex14460</span>
+        </span>
+        <span class="text-sm font-medium group-hover:translate-x-0.5 transition-transform">→</span>
+      </a>
     </div>
   </div>
 

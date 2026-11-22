@@ -22,7 +22,7 @@ const { title, summary, date, tags, draft } = post.data
 ---
 
 <PageLayout title={title} description={summary} type="article" publishedTime={date.toISOString()} author="Alexandre Roussel" tags={tags}>
-  <TopLayout>
+  <TopLayout pad="sm">
     <div class="animate">
       <ArticleTopLayout entry={post}/>
     </div>

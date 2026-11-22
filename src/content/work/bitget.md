@@ -2,7 +2,7 @@
 company: "Bitget"
 role: "Customer Support Specialist & Trading SME"
 dateStart: "2022-09-01"
-dateEnd: "2025-03-31"
+dateEnd: "2025-02-28"
 summary: "Premium support to 15–20 French-speaking KOL/VIP accounts across Spot, Margin and Futures — consistently meeting SLA and KPI targets."
 ---
 

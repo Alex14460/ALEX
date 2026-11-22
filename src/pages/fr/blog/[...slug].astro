@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+import ArticleTopLayout from "@layouts/ArticleTopLayout.astro"
+import ArticleBottomLayout from "@layouts/ArticleBottomLayout.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogfr")
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+
+type Props = CollectionEntry<"blogfr">
+const post = Astro.props
+const { title, summary, date, tags } = post.data
+---
+
+<PageLayout lang="fr" title={title} description={summary} type="article" publishedTime={date.toISOString()} author="Alexandre Roussel" tags={tags}>
+  <TopLayout pad="sm">
+    <div class="animate">
+      <ArticleTopLayout entry={post} lang="fr" />
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <ArticleBottomLayout entry={post} lang="fr" />
+    </div>
+  </BottomLayout>
+</PageLayout>

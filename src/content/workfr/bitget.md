@@ -2,7 +2,7 @@
 company: "Bitget"
 role: "Spécialiste support client & SME Futures"
 dateStart: "2022-09-01"
-dateEnd: "2025-03-31"
+dateEnd: "2025-02-28"
 summary: "Support premium pour 15–20 comptes KOL/VIP francophones sur Spot, Margin et Futures — objectifs SLA et KPI constamment atteints."
 ---
 
