@@ -115,6 +115,18 @@ const jsonLd = {
 <script is:inline src="/js/animate.js"></script>
 <script defer is:inline src="/js/copy.js"></script>
 
+<!-- Cloudflare Web Analytics (beacon rendered only when PUBLIC_CF_BEACON_TOKEN is set;
+     `spa: true` counts Astro View Transitions navigations; kept in <head> so the
+     client-side router does not tear it down between pages) -->
+{import.meta.env.PUBLIC_CF_BEACON_TOKEN && (
+  <script
+    is:inline
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={JSON.stringify({ token: import.meta.env.PUBLIC_CF_BEACON_TOKEN, spa: true })}
+  />
+)}
+
 <!-- ViewTransitions -->
 <ViewTransitions />
 
