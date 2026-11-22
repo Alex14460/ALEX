@@ -1,8 +1,9 @@
 ---
 company: "Amazon"
 role: "Fraud Investigation Specialist"
-dateStart: "09/01/2016"
-dateEnd: "12/31/2017"
+dateStart: "2016-09-01"
+dateEnd: "2017-12-31"
+summary: "Payment-fraud investigations at Amazon TRMS — roughly 300 credit-card fraud cases per week, SLA and KPI targets consistently met."
 ---
 
 Transaction Risk Management Services (TRMS), protecting customers against payment fraud.

@@ -1,7 +1,7 @@
 ---
 title: "Crypto Mining Farm"
 summary: "Building and operating a small-scale GPU & ASIC mining operation from sourcing to resale"
-date: "Jun 01 2017"
+date: "2017-06-01"
 draft: false
 tags:
 - Crypto
@@ -29,7 +29,7 @@ A few photos I managed to recover years later. These are some of the only surviv
 
 |                                                           |                                                          |                                                                |                                                                                                                       |
 | --------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| ![](/projects/mining/mining1.jpeg)                        | ![](/projects/mining/mining2.jpeg)                       | ![](/projects/mining/mining3.jpeg)                              | ![](/projects/mining/mining4.jpeg)                                                                                    |
+| ![GTX 1070 mining rig — PSU and motherboard on the board below](/projects/mining/mining1.jpeg) | ![The wire mesh cut to fit inside the shelf](/projects/mining/mining2.jpeg) | ![Rig with network switch and monitoring station](/projects/mining/mining3.jpeg) | ![Incoming GPU and PSU inventory — the bootstrapped beginnings of the project](/projects/mining/mining4.jpeg) |
 | *GTX 1070 mining rig — PSU and motherboard are on the board below.* | *The wire mesh was cut to fit inside the shelf.* | *With the network switch and the monitoring station.* | *Incoming GPU & PSU inventory : a reminder of the project’s very hands-on, bootstrapped beginnings.* |
 
 For better ventilation, the GPUs were later suspended individually by fastening them directly to the wire shelving, which significantly improved airflow and reduced operating temperatures.

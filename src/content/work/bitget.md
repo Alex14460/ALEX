@@ -1,8 +1,9 @@
 ---
 company: "Bitget"
 role: "Customer Support Specialist & Trading SME"
-dateStart: "09/01/2022"
-dateEnd: "03/31/2025"
+dateStart: "2022-09-01"
+dateEnd: "2025-03-31"
+summary: "Premium support to 15–20 French-speaking KOL/VIP accounts across Spot, Margin and Futures — consistently meeting SLA and KPI targets."
 ---
 
 Global cryptocurrency exchange specializing in spot, margin, and derivatives trading.

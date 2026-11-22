@@ -1,7 +1,7 @@
 ---
 title: "What I Actually Use AI For"
 summary: "How I use AI every day: a home-hosted agent that maintains my site, helps with my job search, and takes orders by voice."
-date: "Jul 21 2026"
+date: "2026-07-21"
 draft: false
 tags:
   - AI

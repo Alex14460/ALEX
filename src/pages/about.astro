@@ -13,12 +13,21 @@ import { SITE } from '@consts'
     <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
       Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.
     </div>
-    <div class="animate mt-6 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400 font-mono">
-      <span>📍 {SITE.LOCATION}</span>
+    <div class="animate mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400 font-mono">
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="size-4 stroke-current"><use href="/ui.svg#pin"></use></svg>
+        {SITE.LOCATION}
+      </span>
       <span>·</span>
-      <span>🌐 {SITE.LANGUAGES.join(' / ')}</span>
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="size-4 fill-current"><use href="/ui.svg#globe"></use></svg>
+        {SITE.LANGUAGES.join(' · ')}
+      </span>
       <span>·</span>
-      <span>🎓 Master 2, Management France-America (IAE Caen, 2014–2016)</span>
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="size-4 stroke-current"><use href="/ui.svg#book-open"></use></svg>
+        Master 2, Management France-America (IAE Caen, 2014–2016)
+      </span>
     </div>
   </TopLayout>
 

@@ -1,7 +1,7 @@
 ---
 title: "What Two and a Half Years of Airdrop Farming Taught Me About Opportunity"
 summary: "How my view of crypto airdrop farming shifted from land-grab optimism to a much more disciplined, and more skeptical, way of thinking about opportunity"
-date: "Jul 16 2026"
+date: "2026-07-16"
 draft: false
 tags:
 - Crypto

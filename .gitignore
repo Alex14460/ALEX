@@ -17,5 +17,10 @@ pnpm-debug.log*
 .env
 .env.production
 
+# CV working copies (the served PDF lives in public/)
+/CV_Roussel_Alexandre_v2-2.pdf
+/Alexandre_Roussel_CV_final.txt
+/Alexandre_Roussel_CV_updated.txt
+
 # macOS-specific files
 .DS_Store

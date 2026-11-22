@@ -6,7 +6,7 @@ export const SITE: Site = {
   DESCRIPTION: "Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.",
   AUTHOR: "Alexandre Roussel",
   LOCATION: "Europe / Remote",
-  LANGUAGES: ["fr", "en"],
+  LANGUAGES: ["FR (native)", "EN (fluent — TOEFL 105 / TOEIC 990)", "ES (conversational)"],
 }
 
 // Work Page

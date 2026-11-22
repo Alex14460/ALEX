@@ -1,7 +1,7 @@
 ---
 title: "Airdrop Farming Operation"
 summary: "Founding and coordinating a multi-chain crypto airdrop farming team, from wallet strategy to dedicated node infrastructure"
-date: "Jun 15 2023"
+date: "2023-06-15"
 draft: false
 tags:
 - Crypto
@@ -25,7 +25,7 @@ A key part of the project was managing farming activity across many wallets whil
 
 |                                                                                         |
 | --------------------------------------------------------------------------------------- |
-| ![](/projects/farming/farming2.jpeg)                                                    |
+| ![Dashboard to monitor actions performed, here for a potential Base blockchain airdrop](/projects/farming/farming2.jpeg) |
 | *Dashboard to monitor actions performed, here for a potential Base blockchain airdrop.* |
 
 
