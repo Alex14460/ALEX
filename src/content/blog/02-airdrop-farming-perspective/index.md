@@ -20,7 +20,7 @@ In the first few months, the mindset was pure land-grab. Every new protocol was 
 
 **Phase two: turning intuition into a system**
 
-By late 2023 the naive version of the strategy stopped being enough. Everyone farming the obvious protocols meant the obvious protocols got diluted fast, and it became clear that the people getting rewarded weren't just early — they were organized. So the operation evolved: structured multi-wallet setups, deliberate criteria-tracking (volume thresholds, ranking tools, eligibility checklists), infrastructure to keep it all running cleanly. What had started as "let's try a few dapps" became something closer to a small, semi-professional operation with its own playbooks per protocol.
+By late 2023 the naive version of the strategy stopped being enough. Everyone farming the obvious protocols meant the obvious protocols got diluted fast, and it became clear that the people getting rewarded weren't just early — they were organized. So the operation evolved: deliberate criteria-tracking (volume thresholds, ranking tools, eligibility checklists), disciplined record-keeping, and infrastructure to keep it all running cleanly. What had started as "let's try a few dapps" became something closer to a small, semi-professional operation with its own playbooks per protocol.
 
 That's also when the first real doubt crept in. I remember thinking, sometime around the nine-month mark, that we'd gotten comfortable — and that comfort was being exploited by the projects themselves, which had every incentive to keep farmers grinding for diminishing rewards. The game hadn't changed; our relationship to it had.
 

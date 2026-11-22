@@ -1,6 +1,6 @@
 ---
 title: "Airdrop Farming Operation"
-summary: "Founding and coordinating a multi-chain crypto airdrop farming team, from wallet strategy to dedicated node infrastructure"
+summary: "Founding and coordinating a multi-chain crypto airdrop farming team, from eligibility research and on-chain operations to dedicated node infrastructure"
 date: "2023-06-15"
 draft: false
 tags:
@@ -21,7 +21,7 @@ The core activity was multi-chain "airdrop farming": using on-chain interactions
 
 **Tools and techniques**
 
-A key part of the project was managing farming activity across many wallets while staying within the bounds of each protocol's anti-sybil detection — meaning wallets needed to look organic (varied timing, transaction patterns, and volumes) rather than mechanically identical. This meant paying close attention to IP/fingerprint hygiene (one VPS per identity), transaction diversity, and realistic capital allocation per account, and regularly discussing detection risks and best practices as protocols tightened their criteria. I also spun up and managed cloud VPS infrastructure (Contabo and others) to run isolated environments per wallet cluster and, later, to operate actual blockchain validator/testnet nodes for data-availability and restaking projects.
+A key part of the project was treating each protocol's published distribution rules as the operating contract. Before committing time or capital to a campaign, we researched what the project said it intended to reward — activity across bridging, swapping, staking, liquidity, governance, sustained over a meaningful period with real capital at risk — and we deliberately took part only in ways we would be comfortable if the project's own team reviewed the full history of our accounts. In practice that meant disciplined record-keeping for every account (timestamps, transactions, costs, outcomes), realistic activity patterns that reflected genuine usage rather than scripted mass interactions, and regular internal reviews as protocols updated their criteria. I also spun up and managed cloud VPS infrastructure (Contabo and others) for monitoring, automation and data analysis and, later, to operate actual blockchain validator and testnet nodes for data-availability and restaking projects.
 
 |                                                                                         |
 | --------------------------------------------------------------------------------------- |
@@ -35,6 +35,6 @@ As certain protocols began rewarding infrastructure participation directly, I sp
 
 **Results**
 
-Outcomes varied significantly by protocol, as is inherent to speculative airdrop farming, but the operation was net profitable overall. Some campaigns returned very high multiples relative to the capital and fees deployed (for example, one strategy turned roughly $300 of deployed capital and modest fees into around $1,600 — a ~50x return on costs), while major airdrops such as LayerZero, zkSync, and Scroll produced meaningful five-figure token allocations across the team's accounts. Other campaigns underperformed or were flagged by anti-sybil filters, which the team treated as ongoing signal to refine wallet and account practices.
+Outcomes varied significantly by protocol, as is inherent to speculative airdrop farming, but the operation was net profitable overall. Some campaigns returned very high multiples relative to the capital and fees deployed (for example, one strategy turned roughly $300 of deployed capital and modest fees into around $1,600 — a ~50x return on costs), while major airdrops such as LayerZero, zkSync, and Scroll produced meaningful five-figure token allocations across the team's accounts. Other campaigns underperformed or did not qualify once projects published stricter distribution rules, which the team treated as a signal to narrow its focus and reinvest effort only where its activity genuinely matched what the protocol was looking for.
 
 Running this project taught me how to organize and motivate a small distributed team around a long-running, execution-heavy objective; how to translate fast-moving, ambiguous crypto-native information into a clear operational strategy; and how to manage lightweight infrastructure (VPS, node deployments) in support of that strategy — skills I've carried directly into crypto-native support and account management roles.
