@@ -11,11 +11,12 @@ interface Props {
   modifiedTime?: string
   author?: string
   tags?: string[]
+  alternates?: { hreflang: string; href: string }[]
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = "/open-graph.jpg", type = "website", publishedTime, modifiedTime, author, tags } = Astro.props
+const { title, description, image = "/open-graph.jpg", type = "website", publishedTime, modifiedTime, author, tags, alternates } = Astro.props
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://alexandreroussel.com"
 
@@ -72,6 +73,9 @@ const jsonLd = {
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Hreflang alternates -->
+{alternates?.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

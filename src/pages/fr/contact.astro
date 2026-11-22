@@ -1,0 +1,23 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
+import ContactContent from '@components/ContactContent.astro'
+---
+
+<PageLayout lang="fr" title="Contact" description="Contacter Alexandre Roussel — e-mail, LinkedIn, disponibilité pour des postes de support client & gestion de comptes en crypto, fintech et SaaS.">
+  <TopLayout>
+    <div class="animate page-heading text-4xl md:text-6xl font-bold tracking-tight">
+      Contact
+    </div>
+    <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+      Le moyen le plus rapide de me joindre — et le meilleur point de départ pour parler de votre équipe.
+    </div>
+  </TopLayout>
+
+  <BottomLayout>
+    <div class="animate">
+      <ContactContent lang="fr" />
+    </div>
+  </BottomLayout>
+</PageLayout>

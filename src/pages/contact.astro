@@ -1,0 +1,23 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
+import ContactContent from '@components/ContactContent.astro'
+---
+
+<PageLayout title="Contact" description="Contact Alexandre Roussel — email, LinkedIn, availability for customer support & account management roles in crypto, fintech and SaaS.">
+  <TopLayout>
+    <div class="animate page-heading text-4xl md:text-6xl font-bold tracking-tight">
+      Contact
+    </div>
+    <div class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+      The fastest way to reach me — and the best place to start a conversation about your team.
+    </div>
+  </TopLayout>
+
+  <BottomLayout>
+    <div class="animate">
+      <ContactContent lang="en" />
+    </div>
+  </BottomLayout>
+</PageLayout>

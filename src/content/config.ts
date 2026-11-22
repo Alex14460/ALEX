@@ -11,6 +11,17 @@ const work = defineCollection({
   }),
 })
 
+const workfr = defineCollection({
+  type: "content",
+  schema: z.object({
+    company: z.string(),
+    role: z.string(),
+    summary: z.string(),
+    dateStart: z.coerce.date(),
+    dateEnd: z.union([z.coerce.date(), z.string()]),
+  }),
+})
+
 const blog = defineCollection({
   type: "content",
   schema: z.object({
@@ -43,4 +54,4 @@ const legal = defineCollection({
   }),
 })
 
-export const collections = { work, blog, projects, legal }
+export const collections = { work, workfr, blog, projects, legal }

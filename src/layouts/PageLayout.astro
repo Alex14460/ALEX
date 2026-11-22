@@ -4,23 +4,25 @@ import BaseHead from "@components/BaseHead.astro"
 import Header from "@components/Header.astro"
 import Footer from "@components/Footer.astro"
 import Drawer from "@components/Drawer.astro"
-const { title, description, image, type, publishedTime, modifiedTime, author, tags } = Astro.props
+import { langFromPathname, alternatesFor } from "@lib/i18n"
 import { SITE } from "@consts"
 
+const { title, description, image, type, publishedTime, modifiedTime, author, tags, lang = langFromPathname(Astro.url.pathname) } = Astro.props
 const fullTitle = type === "profile" ? title : `${title} | ${SITE.TITLE}`
+const alternates = Astro.site ? alternatesFor(Astro.url.pathname, Astro.site.toString()) : undefined
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
-    <BaseHead title={fullTitle} description={description} image={image} type={type} publishedTime={publishedTime} modifiedTime={modifiedTime} author={author} tags={tags} />
+    <BaseHead title={fullTitle} description={description} image={image} type={type} publishedTime={publishedTime} modifiedTime={modifiedTime} author={author} tags={tags} alternates={alternates} />
   </head>
   <body>
-    <Header />
-    <Drawer />
+    <Header lang={lang} />
+    <Drawer lang={lang} />
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
