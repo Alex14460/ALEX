@@ -3,7 +3,7 @@ export type Lang = "en" | "fr"
 export const DEFAULT_LANG: Lang = "en"
 
 /** Paths that exist in both languages (EN canonical form). */
-const BILINGUAL = ["/", "/work", "/about", "/contact", "/blog"]
+const BILINGUAL = ["/", "/work", "/about", "/contact", "/blog", "/recruiters", "/projects"]
 
 export function langFromPathname(pathname: string): Lang {
   return pathname === "/fr" || pathname.startsWith("/fr/") ? "fr" : "en"
@@ -32,7 +32,7 @@ export function counterpartPath(pathname: string, to: Lang): string {
 /** hreflang entries for BaseHead; undefined when the page is not bilingual. */
 export function alternatesFor(pathname: string, site: string) {
   const canonical = enPath(pathname)
-  const bilingual = BILINGUAL.includes(canonical) || canonical.startsWith("/blog/")
+  const bilingual = BILINGUAL.includes(canonical) || canonical.startsWith("/blog/") || canonical.startsWith("/projects/")
   if (!bilingual) return undefined
   const enHref = new URL(canonical, site).toString()
   const frHref = new URL(canonical === "/" ? "/fr" : "/fr" + canonical, site).toString()

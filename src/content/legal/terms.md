@@ -15,7 +15,7 @@ All original content on this site (text, project descriptions, blog posts) is (c
 
 #### Accuracy
 
-I aim for accuracy, especially given the nature of my work. If you spot an error, please let me know at contact@alexandreroussel.com.
+I aim for accuracy, especially given the nature of my work. If you spot an error, please let me know at AlexandreR365@gmail.com.
 
 #### Links to other websites
 

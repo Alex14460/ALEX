@@ -7,7 +7,10 @@ type Props = {
 }
 
 const hrefFor = (collection: string, slug: string) =>
-  collection === "blogfr" ? `/fr/blog/${slug}` : collection === "blog" ? `/blog/${slug}` : `/${collection}/${slug}`
+  collection === "blogfr" ? `/fr/blog/${slug}`
+  : collection === "blog" ? `/blog/${slug}`
+  : collection === "work" ? `/work#${slug}`
+  : `/${collection}/${slug}`
 
 export default function ArrowCard({ entry, pill }: Props) {
   return (
@@ -16,7 +19,7 @@ export default function ArrowCard({ entry, pill }: Props) {
         <div class="flex flex-wrap items-center gap-2">
           {pill &&
             <div class="text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25">
-              {entry.collection === "blogfr" ? "article" : entry.collection === "blog" ? "post" : "project"}
+              {(entry.collection as string) === "blogfr" ? "article" : (entry.collection as string) === "blog" ? "post" : (entry.collection as string) === "work" ? "role" : "project"}
             </div>
           }
           <div class="text-sm uppercase">

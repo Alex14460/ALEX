@@ -1,5 +1,18 @@
 import type { Site, Page, Links, Socials } from "@types"
 
+// Contact — single source of truth.
+// NOTE: contact@alexandreroussel.com is displayed nowhere because the domain has
+// no MX record (mail to it bounces). Set EMAIL back to the branded address once
+// Cloudflare Email Routing is enabled on alexandreroussel.com.
+export const CONTACT = {
+  EMAIL: "AlexandreR365@gmail.com",
+  EMAIL_BRANDED: "contact@alexandreroussel.com",
+  /** Cal.com / Calendly URL. Empty string => the booking block falls back to a mailto link. */
+  BOOKING_URL: "",
+  RESPONSE_TIME_EN: "I answer every message within 24 hours on business days.",
+  RESPONSE_TIME_FR: "Je réponds à chaque message sous 24 h ouvrées.",
+}
+
 // Global
 export const SITE: Site = {
   TITLE: "Alexandre Roussel",
@@ -64,7 +77,7 @@ export const FR_LINKS: Links = [
   },
   {
     TEXT: "Projets",
-    HREF: "/projects",
+    HREF: "/fr/projects",
   },
   {
     TEXT: "Blog",
@@ -85,8 +98,8 @@ export const SOCIALS: Socials = [
   {
     NAME: "Email",
     ICON: "email",
-    TEXT: "contact@alexandreroussel.com",
-    HREF: "mailto:contact@alexandreroussel.com",
+    TEXT: CONTACT.EMAIL,
+    HREF: `mailto:${CONTACT.EMAIL}`,
   },
   {
     NAME: "LinkedIn",

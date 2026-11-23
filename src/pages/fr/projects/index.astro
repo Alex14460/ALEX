@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+
+const projects = (await getCollection("projects"))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+
+function formatDateFR(d: Date) {
+  return d.toLocaleDateString("fr-FR", { month: "long", year: "numeric" })
+}
+---
+
+<PageLayout
+  lang="fr"
+  title="Projets"
+  description="Projets techniques d'Alexandre Roussel : ferme de mining GPU/ASIC, opérations de farming d'airdrops, nœuds validateurs et outillage d'automatisation."
+>
+  <TopLayout>
+    <div class="animate">
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">Projets</h1>
+      <div class="mt-1">
+        Projets techniques menés en parallèle de mon activité — infrastructure crypto et automatisation.
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <ul>
+      {projects.map((project) => (
+        <li class="animate border-b border-black/10 dark:border-white/25 last-of-type:border-none">
+          <a href={`/fr/projects/${project.slug}`} class="block py-8 group">
+            <div class="text-sm uppercase opacity-70">{formatDateFR(project.data.date)}</div>
+            <div class="text-xl font-semibold text-black dark:text-white mt-1 group-hover:underline underline-offset-4">
+              {project.data.titleFr ?? project.data.title}
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">
+              {project.data.summaryFr ?? project.data.summary}
+            </div>
+            <ul class="flex flex-wrap mt-3 gap-1">
+              {project.data.tags.map((tag: string) => (
+                <li class="text-xs uppercase py-0.5 px-2 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-8">
+      Les articles détaillés sont rédigés en anglais (version d'origine) ; la version anglaise de cette page est sur
+      <a href="/projects" class="underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white">/projects</a>.
+    </p>
+  </BottomLayout>
+</PageLayout>

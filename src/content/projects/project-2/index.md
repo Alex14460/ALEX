@@ -1,6 +1,8 @@
 ---
 title: "Airdrop Farming Operation"
 summary: "Founding and coordinating a multi-chain crypto airdrop farming team, from eligibility research and on-chain operations to dedicated node infrastructure"
+titleFr: "Opération de farming d'airdrops"
+summaryFr: "Création et coordination d'une équipe de farming d'airdrops multi-chaînes : recherche d'éligibilité, opérations on-chain et infrastructure de nœuds dédiée"
 date: "2023-06-15"
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions"
-import { SITE } from "@consts"
+import { SITE, CONTACT } from "@consts"
 
 interface Props {
   title: string
@@ -32,7 +32,7 @@ const jsonLd = {
   headline: type === "article" ? title.split(" | ")[0] : undefined,
   ...(isPerson && {
     jobTitle: "Customer Support & Account Management",
-    email: "mailto:contact@alexandreroussel.com",
+    email: `mailto:${CONTACT.EMAIL}`,
     sameAs: [
       "https://www.linkedin.com/in/roussel-alexandre/",
       "https://github.com/Alex14460",

@@ -184,3 +184,50 @@ article img {
   opacity: 0;
   transform: translateY(10px);
 } */
+
+/** Print: a recruiter who prints or "exports to PDF" a page should get a clean
+    document — no nav/footer chrome, animations revealed, urls made visible. */
+@media print {
+  header,
+  footer,
+  #drawer,
+  #back-to-top,
+  .no-print {
+    display: none !important;
+  }
+
+  html.js .animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #444;
+  }
+
+  .pt-36,
+  .pt-16 {
+    padding-top: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}

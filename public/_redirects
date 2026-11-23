@@ -2,3 +2,11 @@
 /cv /CV_Roussel_Alexandre_v2-3.pdf 301
 /cv-fr /CV_Roussel_Alexandre_v2-3-FR.pdf 301
 /fr/cv /CV_Roussel_Alexandre_v2-3-FR.pdf 301
+# Old CV revisions: the v2-2 PDFs (5.4 KB, broken layout) still answer from edge/browser
+# cache even though they are gone from the deployment. Redirect them permanently.
+/CV_Roussel_Alexandre_v2-2.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
+/CV_Roussel_Alexandre_v2-2-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301
+/CV_Roussel_Alexandre_v2-1.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
+/CV_Roussel_Alexandre_v2-1-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301
+/CV_Roussel_Alexandre_v2.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
+/CV_Roussel_Alexandre_v2-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301

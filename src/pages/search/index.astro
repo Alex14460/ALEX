@@ -8,11 +8,25 @@ import { SEARCH } from "@consts";
 
 const posts = (await getCollection("blog")).filter((post) => !post.data.draft);
 
+const postsFr = (await getCollection("blogfr")).filter((post) => !post.data.draft);
+
 const projects = (await getCollection("projects")).filter(
   (post) => !post.data.draft,
 );
 
-const data = [...posts, ...projects] as CollectionEntry<"blog">[];
+// Work entries have no title/date/tags of their own: shape them for the shared
+// ArrowCard ("Company — Role" title, dateStart as the date, company as the tag).
+const work = (await getCollection("work")).map((entry) => ({
+  ...entry,
+  data: {
+    ...entry.data,
+    title: `${entry.data.company} — ${entry.data.role}`,
+    date: entry.data.dateStart,
+    tags: [entry.data.company],
+  },
+}));
+
+const data = [...posts, ...postsFr, ...projects, ...work] as CollectionEntry<"blog">[];
 ---
 
 <PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>

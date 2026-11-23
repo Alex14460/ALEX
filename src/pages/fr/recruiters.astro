@@ -1,0 +1,121 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
+import { CONTACT } from '@consts'
+
+const card = "p-5 border border-black/10 dark:border-white/20 rounded-lg bg-white/50 dark:bg-black/50 h-full"
+const pill = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium"
+const pillPrimary = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-transparent bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 transition-colors duration-300 font-semibold"
+const bookingHref = CONTACT.BOOKING_URL || `mailto:${CONTACT.EMAIL}?subject=${encodeURIComponent("Entretien — prise de créneau")}`
+
+const roles = [
+  { t: "Support client / CX — niveau 1 à 2, technique", d: "Exchanges crypto, SaaS fintech et produits à base utilisateurs techniques. Poste spécialiste ou lead d'équipe, desks VIP/KOL inclus." },
+  { t: "Product Operations / Support Ops", d: "Triage du backlog, propriété des SOP et de la base de connaissances, récupération CSAT, boucles Voice of Customer vers Product et Engineering." },
+  { t: "Risque, fraude & investigations", d: "Fraude carte, revue du risque transactionnel, bases KYC/AML et vérification d'identité — avec une certification AML/CFT à l'appui." },
+  { t: "Customer Success / Gestion de comptes", d: "Gestion de comptes exigeants de bout en bout : onboarding, escalades, rétention, et la crédibilité technique pour parler aux équipes produit." },
+]
+
+const evidence = [
+  { t: "15 à 20 comptes KOL/VIP gérés chez Bitget", d: "Support dédié aux traders KOL et VIP francophones ; les business developers m'adressaient directement les sujets techniques de leurs clients. Promu Subject Matter Expert Futures." },
+  { t: "Une documentation devenue la référence du marché français", d: "Rédaction de la documentation interne du support chez Bitget et formation des nouveaux arrivants dessus — la base utilisée pour les opérations marché français." },
+  { t: "CSAT 95 %+ en pleine saison déclarative", d: "Chez Waltio, résolution des cas on-chain, de synchronisation API et de fiscalité crypto au pic des déclarations, avec transformation des récurrences en tickets JIRA/Linear et en correctifs du centre d'aide." },
+  { t: "~300 dossiers de fraude carte par semaine", d: "Amazon TRMS : investigation de fraude au paiement sur un outil interne, habilitation à bloquer ou annuler des transactions, coordination avec les équipes internes et les parties prenantes externes." },
+]
+---
+
+<PageLayout
+  lang="fr"
+  title="Espace recruteurs"
+  description="Synthèse pour recruteurs — postes visés, preuves, logistique, langues, téléchargement du CV et prise de contact directe par Alexandre Roussel."
+>
+  <TopLayout>
+    <h1 class="animate page-heading text-4xl md:text-6xl font-bold tracking-tight">
+      Espace recruteurs
+    </h1>
+    <p class="animate mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+      Tout ce qu'un hiring manager veut savoir avant le premier appel — les postes sur lesquels je performe, les preuves derrière, la logistique, et un moyen direct de me joindre.
+    </p>
+    <div class="animate mt-3 inline-flex items-center gap-2 text-sm font-medium text-green-700 dark:text-green-300">
+      <span class="relative flex h-2.5 w-2.5 shrink-0">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+      </span>
+      Disponible immédiatement — full remote (Europe), chevauchement US East Coast l'après-midi
+    </div>
+    <div class="animate mt-6 flex flex-wrap items-center gap-4">
+      <a href="/cv-fr?from=recruiters" class={pillPrimary}>Télécharger le CV (FR)</a>
+      <a href="/cv?from=recruiters" class={pill}>CV (EN)</a>
+      <a href={bookingHref} class={pill}>Proposer un créneau</a>
+    </div>
+  </TopLayout>
+
+  <BottomLayout>
+    <section class="py-12 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Ce que je recherche</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        {roles.map((r) => (
+          <article class={card}>
+            <h3 class="font-semibold text-black dark:text-white mb-2">{r.t}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{r.d}</p>
+          </article>
+        ))}
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-6">
+        Secteurs visés : crypto, fintech et SaaS B2B · Full remote (Europe) ou hybride en Espagne · CDI en priorité, freelance possible.
+      </p>
+    </section>
+
+    <section class="py-12 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Des preuves, pas des adjectifs</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        {evidence.map((e) => (
+          <article class={card}>
+            <h3 class="font-semibold text-black dark:text-white mb-2">{e.t}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{e.d}</p>
+          </article>
+        ))}
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-6">
+        Parcours complet sur <a href="/fr/work" class="underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white">/fr/work</a>,
+        travail technique sur <a href="/fr/projects" class="underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white">/fr/projects</a>.
+      </p>
+    </section>
+
+    <section class="py-12 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Logistique &amp; langues</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class={card}>
+          <h3 class="font-semibold text-black dark:text-white mb-2">Logistique</h3>
+          <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+            <li>Citoyen UE/Schengen — aucun parrainage nécessaire</li>
+            <li>Basé à Las Palmas, Espagne (CET/CEST)</li>
+            <li>Full remote depuis 2022 · chevauchement partiel US East Coast</li>
+            <li>Disponible immédiatement · horaires 9 h – 18 h, flexibles pour les entretiens</li>
+          </ul>
+        </div>
+        <div class={card}>
+          <h3 class="font-semibold text-black dark:text-white mb-2">Langues</h3>
+          <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+            <li>Français — langue maternelle ; support, formation et documentation marché français</li>
+            <li>Anglais — C2 (TOEFL 105/120, TOEIC 990/990) ; langue de travail depuis 2016</li>
+            <li>Espagnol — conversationnel, pratique quotidienne en Espagne depuis 2022</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold mb-6">Me joindre</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href={`mailto:${CONTACT.EMAIL}`} class={pill}>{CONTACT.EMAIL}</a>
+        <a href="https://www.linkedin.com/in/roussel-alexandre/" target="_blank" rel="noopener noreferrer" class={pill}>LinkedIn</a>
+        <a href="https://github.com/Alex14460" target="_blank" rel="noopener noreferrer" class={pill}>GitHub</a>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">{CONTACT.RESPONSE_TIME_FR}</p>
+      <p class="text-xs text-gray-500 dark:text-gray-500 mt-6">
+        Cette page répond aux questions que posent les recruteurs en premier — s'il manque quelque chose, demandez et je l'ajoute.
+      </p>
+    </section>
+  </BottomLayout>
+</PageLayout>

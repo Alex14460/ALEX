@@ -1,0 +1,58 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects")
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: project,
+  }))
+}
+
+type Props = CollectionEntry<"projects">
+const project = Astro.props
+const { title, titleFr, summary, summaryFr, date, tags } = project.data
+const { Content } = await project.render()
+
+const displayTitle = titleFr ?? title
+const displaySummary = summaryFr ?? summary
+
+function formatDateFR(d: Date) {
+  return d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })
+}
+---
+
+<PageLayout
+  lang="fr"
+  title={displayTitle}
+  description={displaySummary}
+  type="article"
+  publishedTime={date.toISOString()}
+  author="Alexandre Roussel"
+  tags={tags}
+>
+  <TopLayout pad="sm">
+    <div class="animate">
+      <div class="text-sm uppercase opacity-70">{formatDateFR(date)} · Projet</div>
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">{displayTitle}</h1>
+      <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl">{displaySummary}</p>
+      <ul class="flex flex-wrap mt-4 gap-1">
+        {tags.map((tag: string) => (
+          <li class="text-xs uppercase py-0.5 px-2 rounded border border-black/15 dark:border-white/25">{tag}</li>
+        ))}
+      </ul>
+      <p class="mt-6 text-sm text-gray-500 dark:text-gray-400 border-l-2 border-black/15 dark:border-white/25 pl-3">
+        Article rédigé en anglais (version d'origine) — résumé en français ci-dessus.
+        Version anglaise complète : <a href={`/projects/${project.slug}`} class="underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white">/projects/{project.slug}</a>.
+      </p>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <article class="animate">
+      <Content />
+    </article>
+  </BottomLayout>
+</PageLayout>

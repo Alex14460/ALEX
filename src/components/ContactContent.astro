@@ -1,9 +1,13 @@
 ---
 import type { Lang } from "@lib/i18n"
+import { CONTACT } from "@consts"
 
 const { lang = "en" } = Astro.props as { lang?: Lang }
 const fr = lang === "fr"
-const EMAIL = "contact@alexandreroussel.com"
+const EMAIL = CONTACT.EMAIL
+const bookingHref = CONTACT.BOOKING_URL
+  || `mailto:${CONTACT.EMAIL}?subject=${encodeURIComponent(fr ? "Entretien — prise de créneau" : "Interview — let's book a slot")}`
+const bookingLabel = fr ? "Proposer un créneau" : "Book a slot"
 const pill = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium"
 ---
 
@@ -29,8 +33,16 @@ const pill = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border bor
       </button>
     </div>
     <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-      {fr ? "Je réponds à chaque message sous 24 h ouvrées." : "I answer every message within 24 hours on business days."}
+      {fr ? CONTACT.RESPONSE_TIME_FR : CONTACT.RESPONSE_TIME_EN}
     </p>
+    <div class="flex flex-wrap gap-3 mt-3">
+      <a href={bookingHref} class={pill}>
+        {bookingLabel} →
+      </a>
+      <a href={fr ? "/fr/recruiters" : "/recruiters"} class="inline-flex items-center px-2 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white transition-colors duration-300">
+        {fr ? "Espace recruteurs" : "For recruiters"}
+      </a>
+    </div>
   </div>
 
   <div>
@@ -65,8 +77,8 @@ const pill = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full border bor
   <div>
     <h3 class="font-semibold mb-3">CV</h3>
     <div class="flex flex-wrap gap-4">
-      <a href="/cv-fr" class={pill}>{fr ? "Télécharger le CV (FR)" : "CV en français"}</a>
-      <a href="/cv" class={pill}>{fr ? "Download CV (EN)" : "CV (English)"}</a>
+      <a href="/cv-fr?from=contact" class={pill}>{fr ? "Télécharger le CV (FR)" : "CV en français"}</a>
+      <a href="/cv?from=contact" class={pill}>{fr ? "Download CV (EN)" : "CV (English)"}</a>
     </div>
   </div>
 </div>

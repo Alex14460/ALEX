@@ -1,6 +1,8 @@
 ---
 title: "Crypto Mining Farm"
 summary: "Building and operating a small-scale GPU & ASIC mining operation from sourcing to resale"
+titleFr: "Ferme de mining crypto"
+summaryFr: "Construction et exploitation d'une petite opération de mining GPU & ASIC, du sourcing des cartes à la revente du matériel"
 date: "2017-06-01"
 draft: false
 tags:

@@ -19,7 +19,7 @@ The site is hosted on Cloudflare Pages. As with virtually any website, basic tec
 
 #### Your rights
 
-Under the GDPR, you may request access to, rectification, or deletion of any personal information you have sent me. Contact: contact@alexandreroussel.com.
+Under the GDPR, you may request access to, rectification, or deletion of any personal information you have sent me. Contact: AlexandreR365@gmail.com.
 
 #### Changes to this policy
 
