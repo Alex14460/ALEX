@@ -22,5 +22,5 @@ Live at [alexandreroussel.com](https://alexandreroussel.com).
 
 ## Notes
 
-- The CV served at `/CV_Roussel_Alexandre_v2-2.pdf` lives in `public/` — keep it in sync with the latest version.
+- The CV served at `/Alexandre_Roussel_CV_EN.pdf` and `/Alexandre_Roussel_CV_FR.pdf` lives in `public/` (generated from `tools/cv/cv_en.html` / `cv_fr.html`) — keep it in sync with the latest version.
 - `/cv` redirects to the PDF (`public/_redirects`).

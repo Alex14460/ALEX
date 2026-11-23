@@ -1,12 +1,15 @@
 # Cloudflare Pages redirects
-/cv /CV_Roussel_Alexandre_v2-3.pdf 301
-/cv-fr /CV_Roussel_Alexandre_v2-3-FR.pdf 301
-/fr/cv /CV_Roussel_Alexandre_v2-3-FR.pdf 301
-# Old CV revisions: the v2-2 PDFs (5.4 KB, broken layout) still answer from edge/browser
-# cache even though they are gone from the deployment. Redirect them permanently.
-/CV_Roussel_Alexandre_v2-2.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
-/CV_Roussel_Alexandre_v2-2-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301
-/CV_Roussel_Alexandre_v2-1.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
-/CV_Roussel_Alexandre_v2-1-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301
-/CV_Roussel_Alexandre_v2.pdf /CV_Roussel_Alexandre_v2-3.pdf 301
-/CV_Roussel_Alexandre_v2-FR.pdf /CV_Roussel_Alexandre_v2-3-FR.pdf 301
+# Served CV files: Alexandre_Roussel_CV_EN.pdf / Alexandre_Roussel_CV_FR.pdf
+/cv /Alexandre_Roussel_CV_EN.pdf 301
+/cv-fr /Alexandre_Roussel_CV_FR.pdf 301
+/fr/cv /Alexandre_Roussel_CV_FR.pdf 301
+# Every previous CV filename keeps working (old revisions used to be served from
+# edge/browser cache long after removal, so they are redirected permanently).
+/CV_Roussel_Alexandre_v2-3.pdf /Alexandre_Roussel_CV_EN.pdf 301
+/CV_Roussel_Alexandre_v2-3-FR.pdf /Alexandre_Roussel_CV_FR.pdf 301
+/CV_Roussel_Alexandre_v2-2.pdf /Alexandre_Roussel_CV_EN.pdf 301
+/CV_Roussel_Alexandre_v2-2-FR.pdf /Alexandre_Roussel_CV_FR.pdf 301
+/CV_Roussel_Alexandre_v2-1.pdf /Alexandre_Roussel_CV_EN.pdf 301
+/CV_Roussel_Alexandre_v2-1-FR.pdf /Alexandre_Roussel_CV_FR.pdf 301
+/CV_Roussel_Alexandre_v2.pdf /Alexandre_Roussel_CV_EN.pdf 301
+/CV_Roussel_Alexandre_v2-FR.pdf /Alexandre_Roussel_CV_FR.pdf 301
