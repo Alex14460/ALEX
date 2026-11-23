@@ -201,10 +201,21 @@ article img {
     transform: none !important;
   }
 
+  /* Dark-theme visitors were printing the dark palette: with "background
+     graphics" off (the browser default) that produced near-invisible white
+     text on white paper. Force the light palette on the root AND on every
+     element, since `dark:text-*` utilities out-specify a bare `body` rule. */
   html,
-  body {
+  html.dark,
+  body,
+  html.dark body {
     background: #fff !important;
     color: #000 !important;
+  }
+
+  body * {
+    color: #000 !important;
+    background-color: transparent !important;
   }
 
   a {
