@@ -27,9 +27,9 @@ function formatWorkDate(input: Date | string) {
 
 <PageLayout lang="fr" title="Expérience" description="Mes expériences professionnelles — support client, gestion de comptes, crypto & fintech.">
   <TopLayout>
-    <div class="animate page-heading">
+    <h1 class="animate page-heading">
       Expérience
-    </div>
+    </h1>
   </TopLayout>
   <BottomLayout>
     <ul>
@@ -39,12 +39,17 @@ function formatWorkDate(input: Date | string) {
             <div class="text-sm uppercase mb-4">
               {formatWorkDate(entry.data.dateStart)} – {formatWorkDate(entry.data.dateEnd)}
             </div>
-            <div class="text-black dark:text-white font-semibold">
+            <h2 class="text-black dark:text-white font-semibold flex flex-wrap items-center gap-2">
               {entry.data.company}
-            </div>
-            <div class="text-sm font-semibold">
+              {entry.data.remote && (
+                <span class="text-xs font-medium uppercase tracking-wide px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25 text-gray-600 dark:text-gray-300">
+                  Remote
+                </span>
+              )}
+            </h2>
+            <p class="text-sm font-semibold">
               {entry.data.role}
-            </div>
+            </p>
             <article class="prose dark:prose-invert">
               <entry.Content />
             </article>

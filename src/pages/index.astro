@@ -31,13 +31,13 @@ function formatWorkDate(input: Date | string) {
 }
 ---
 
-<PageLayout title={SITE.TITLE} description={SITE.DESCRIPTION} type="profile" author="Alexandre Roussel">
+<PageLayout title="Alexandre Roussel — Customer Support & Ops, Crypto & Fintech" description={SITE.DESCRIPTION} type="profile" author="Alexandre Roussel">
   <TopLayout>
     <div class="animate flex items-center gap-6 md:gap-8">
       <div class="min-w-0">
-        <div class="page-heading text-4xl md:text-6xl font-bold tracking-tight">
+        <h1 class="page-heading text-4xl md:text-6xl font-bold tracking-tight">
           Alexandre Roussel
-        </div>
+        </h1>
         <div class="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
           Customer Support & Account Management — SaaS, Fintech, Crypto. Bilingual FR/EN.
         </div>
@@ -61,23 +61,26 @@ function formatWorkDate(input: Date | string) {
       <a href="/blog" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
         Blog
       </a>
-      <a href="/cv" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
+      <a href="/cv" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-transparent bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 transition-colors duration-300 font-semibold">
         Download CV
       </a>
-      <a href="/cv-fr" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-300 font-medium">
-        CV FR
+      <a href="/cv-fr" class="inline-flex items-center px-1 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:text-black dark:hover:text-white transition-colors duration-300">
+        CV (FR)
       </a>
     </div>
-    <div class="animate mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400 font-mono">
+    <div class="animate mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500 dark:text-gray-400 font-mono">
       <span class="inline-flex items-center gap-1.5">
         <svg class="size-4 stroke-current"><use href="/ui.svg#pin"></use></svg>
         {SITE.LOCATION}
       </span>
-      <span>·</span>
       <span class="inline-flex items-center gap-1.5">
         <svg class="size-4 fill-current"><use href="/ui.svg#globe"></use></svg>
         {SITE.LANGUAGES.join(' · ')}
       </span>
+    </div>
+    <div class="animate mt-6 text-sm text-gray-500 dark:text-gray-400">
+      <span class="font-mono text-xs uppercase tracking-wider">Former organisations</span>
+      <span class="mt-1 block text-black/80 dark:text-white/80">Amazon · Bitget · Waltio · Groupon · KEYRPTO · Retro Tour Normandy</span>
     </div>
   </TopLayout>
 

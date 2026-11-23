@@ -75,12 +75,14 @@ const fr = lang === "fr"
                   <a
                     href={SOCIAL.HREF}
                     target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
-                    class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                    class="group flex items-center gap-2 rounded-full px-3 py-1.5 text-sm hover:bg-black/5 dark:hover:bg-white/20 blend"
                   >
-                    <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                    <svg class="size-5 shrink-0 fill-current group-hover:fill-black group-hover:dark:fill-white blend">
                       <use href={`/social.svg#${SOCIAL.ICON}`} />
                     </svg>
+                    <span class="hidden sm:inline">{SOCIAL.NAME}</span>
                   </a>
                 ))
               }

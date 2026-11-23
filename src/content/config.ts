@@ -8,6 +8,7 @@ const work = defineCollection({
     summary: z.string(),
     dateStart: z.coerce.date(),
     dateEnd: z.union([z.coerce.date(), z.string()]),
+    remote: z.boolean().optional(),
   }),
 })
 
@@ -19,6 +20,7 @@ const workfr = defineCollection({
     summary: z.string(),
     dateStart: z.coerce.date(),
     dateEnd: z.union([z.coerce.date(), z.string()]),
+    remote: z.boolean().optional(),
   }),
 })
 

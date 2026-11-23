@@ -3,6 +3,7 @@ company: "Waltio"
 role: "Customer Care Specialist (Freelance)"
 dateStart: "2025-03-01"
 dateEnd: "2026-07-31"
+remote: true
 summary: "Multilingual support for France's leading crypto-tax SaaS — on-chain transactions, API sync, tax reporting — 95 %+ CSAT, SLA/KPI targets met."
 ---
 

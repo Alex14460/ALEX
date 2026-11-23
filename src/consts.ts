@@ -12,25 +12,25 @@ export const SITE: Site = {
 // Work Page
 export const WORK: Page = {
   TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
+  DESCRIPTION: "Customer support, account management and trading support roles across crypto exchanges, fintech SaaS and e-commerce — 2015 to today.",
 }
 
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
-  DESCRIPTION: "Writing on topics I am passionate about.",
+  DESCRIPTION: "Notes on crypto customer support, on-chain tooling and running local AI — written for the people building and staffing support teams.",
 }
 
 // Projects Page 
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  DESCRIPTION: "Hands-on crypto infrastructure: GPU mining farm, airdrop operations, validator nodes and the tooling behind this site.",
 }
 
 // Search Page
 export const SEARCH: Page = {
   TITLE: "Search",
-  DESCRIPTION: "Search all posts and projects by keyword.",
+  DESCRIPTION: "Search every article and project on this site by keyword — support, crypto, automation, infrastructure."
 }
 
 // Links

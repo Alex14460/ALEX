@@ -20,13 +20,43 @@ const { title, description, image = "/open-graph.jpg", type = "website", publish
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://alexandreroussel.com"
 
+const isPerson = type === "profile"
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": type === "article" ? "BlogPosting" : type === "profile" ? "Person" : "WebSite",
+  "@type": isPerson ? "Person" : type === "article" ? "BlogPosting" : "WebSite",
   name: title,
   description: description,
   url: canonicalURL.toString(),
-  image: new URL(image, Astro.url).toString(),
+  image: new URL(isPerson ? "/profile.jpg" : image, Astro.url).toString(),
+  headline: type === "article" ? title.split(" | ")[0] : undefined,
+  ...(isPerson && {
+    jobTitle: "Customer Support & Account Management",
+    email: "mailto:contact@alexandreroussel.com",
+    sameAs: [
+      "https://www.linkedin.com/in/roussel-alexandre/",
+      "https://github.com/Alex14460",
+    ],
+    knowsLanguage: ["fr", "en", "es"],
+    knowsAbout: [
+      "Customer Support",
+      "Account Management",
+      "Cryptocurrency",
+      "Fintech",
+      "SaaS",
+      "KYC / AML",
+      "Trading Support",
+      "Remote collaboration",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Europe",
+    },
+    workLocation: {
+      "@type": "Place",
+      name: "Europe / Full remote",
+    },
+  }),
   author: author ? {
     "@type": "Person",
     name: author,

@@ -25,7 +25,7 @@ A key part of the project was treating each protocol's published distribution ru
 
 |                                                                                         |
 | --------------------------------------------------------------------------------------- |
-| ![Dashboard to monitor actions performed, here for a potential Base blockchain airdrop](/projects/farming/farming2.jpeg) |
+| ![Dashboard to monitor actions performed, here for a potential Base blockchain airdrop](/projects/farming/farming2.webp) |
 | *Dashboard to monitor actions performed, here for a potential Base blockchain airdrop.* |
 
 
