@@ -1,0 +1,7 @@
+# Cloudflare Pages custom headers
+# The CV PDFs carry a personal phone number: keep them out of search-engine
+# indexes (they stay fully downloadable from /cv, /cv-fr and the recruiters page).
+/Alexandre_Roussel_CV_EN.pdf
+  X-Robots-Tag: noindex, nofollow
+/Alexandre_Roussel_CV_FR.pdf
+  X-Robots-Tag: noindex, nofollow
